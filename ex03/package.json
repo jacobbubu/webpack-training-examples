@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-node6": "^0.4.0",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "clean": "cd build && rm -rf *",
+    "build": "npm run clean && webpack",
+    "watch": "npm run clean && webpack --watch",
+    "optimized": "npm run clean && webpack --config optimized.babel.js --watch"
+  }
+}

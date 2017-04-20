@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "concurrently": "^3.4.0",
+    "http-server": "^0.9.0",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "build": "webpack ./src/entry.js ./build/bundle.js",
+    "webserver": "http-server -c-1 ./",
+    "watch": "webpack ./src/entry.js ./build/bundle.js --watch",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run webserver\""
+  }
+}
